@@ -12,7 +12,7 @@ final class LoginDAo Extends DAO
         $stmt->bindValue(1, $Model->Email);
         $stmt->bindValue(2, $Model->Senha);
 
-        $model= $stmt->fechObject("APP\Model\login");
+        $model= $stmt->fechObject("PROJETOS\Models\login");
         return is_object($model) ? $model : null;
     }
 }

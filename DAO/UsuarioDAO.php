@@ -3,8 +3,13 @@
  namespace PROJETOS\DAO;
  use PROJETOS\Models\Usuario;
 
+
   final class UsuarioDAO extends DAO
   {
+    public function __construct(){
+        parent::__construct();
+    }
+    
     public function save( Usuario $model_usuario): Usuario
     {
         return($model_usuario-> $id == null) ? $this->insert($model_usuario):
